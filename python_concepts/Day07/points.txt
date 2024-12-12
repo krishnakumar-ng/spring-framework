@@ -1,0 +1,48 @@
+Multimethods
+------------
+
+1. two methods with same name
+
+
+GIL - global interpreter lock
+
+GIL is a mutex (mutual exclusion lock a program that prevents multiple threads from accessing the same shared resource at the same time) in Cpython
+
+Python ensures that only one thread can execute python bytecode at a given time even on a multicore processor
+
+Purpose 
+-------
+GIL simplifies the implementation of Cpython and protects against race condition when accessing python objects
+
+impact on Performance
+--------------------
+The GIL can be a bottleneck for CPU bound and multithreaded python code as it prevents true parallel execution of python threads
+
+When it doesn't matter
+----------------------
+The GIL has minimal impact of I/O bound operations such as reading a file or network requests because threads can release the GIL while waiting for I/O operations to complete
+
+
+Multiprocessing - use the multiprocessing module to run multiple python interpreters in separate process each with its own GIL. This true parallel execution of python code.
+
+use libraries with C extension - numpy, scipy and pandas
+
+
+we have three different flavours of Python
+
+1. CPython	- currently using
+
+GIL will not have any effect on these to flavours of python
+
+2. Jython	- converting python code to JAVA
+
+3. IronPython	- dot net CLI based code or use dotnet libraries
+
+
+
+ThreadPoolExecutor
+------------------
+ThreadPoolExecutor(max_worker = 10) as e:
+
+
+

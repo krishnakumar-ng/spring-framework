@@ -1,0 +1,24 @@
+meta {
+  name: get product with sort
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:8080/v1/product/sort?productName=Bo&sortBy=price
+  body: json
+  auth: none
+}
+
+params:query {
+  productName: Bo
+  sortBy: price
+}
+
+body:json {
+  {
+    "productName":"Bournvita",
+    "price":400,
+    "quantity":10
+  }
+}

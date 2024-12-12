@@ -1,0 +1,156 @@
+Regular Expressions
+-------------------
+.  - single character
+
+^  - Beginning of the string
+$  - End of the string
+
+
+*   - zero or more occurrences
+?   - zero or one occurrence
++   - one or more occurrences
+
+{n}    - exactly n times
+{n,}   - min n times and max infinite times
+{n, m} - min n times and max m times
+
+[]  - character class
+()  - grouping
+|   - alternation
+\   - escape
+
+
+validate a license number
+-------------------------
+LCNO-KAR-04-2014-0003
+
+
+LCNO - constant
+------------------------------------------------
+
+KAR - State that issued the license
+
+KAR, KER, TND, APN, TLS, MAH, GOA
+------------------------------------------------
+
+04 - RTO office number that issued the license
+
+01 - 73 (no 00)
+
+------------------------------------------------
+2014 - year (2000 onwards)
+
+------------------------------------------------
+0003 - license number 
+
+0001 - 9999  (no 0000)
+
+
+
+LCNO-(KAR|KER|TND|APN|TLS|MAH|GOA)-[0-7][1-9]-2[0-9]{3}-[0-9]{3}[1-9]
+
+
+\w - 	word 		- alpha numeric characters
+
+\W - 	non word	- special characters
+
+\d -    numeric		- numbers
+
+\D -    non numeric	- alphabets, special characters
+
+\s - 	space		- space
+
+\S - 	non space	- alpha numeric, special characters(no space)
+
+\b -	word boundary
+
+\B - 	non word boundary
+
+\A -    Beginning of the string
+
+\Z -    End of the string
+
+
+validate a date
+----------------
+dd/mm/yyyy
+dd-mm-yyyy
+
+dd - 01 - 31 (no 00)
+
+mm - 01 - 12 (no 00)
+
+yyyy - valid year - (1900)
+
+
+invalid
+-------
+dd/mm-yyyy
+dd-mm/yyyy
+
+([0-2][1-9]|[1-3][0-1])(\/|-)([0][1-9]|[1][0-2])(\2)([1-9][0-9]{3})
+ 
+ 
+url = "www.google.com/search?%/%&new%23movies-2024%~!/%region/$%~fetched&/-^$result &-/@%#=res.aspx"
+
+
+fetch the data that is 
+
+1. before /
+2. between the /
+3. after /
+
+no split function
+
+url[:url.search('/')]. --> to get data before first slash
+ 
+
+url[url.rfind('/') + 1 : ]. --> to find data after the last slash
+
+url[url.find('/') + 1 : url.rfind('/')] --> to get the data between first slash and last slash
+
+
+Threads
+-------
+what are threads and what is its use?
+
+
+thread is a part of the process (task)
+
+process is a part of the OS (applications - word, excel, ppt, chrome)
+
+
+
+
+GIL - Global Interpreter Lock
+
+is a mechanism in CPython that ensures only one thread executes in python
+
+
+
+
+
+
+
+
+
+
+topics pending
+--------------
+
+Method overloading
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

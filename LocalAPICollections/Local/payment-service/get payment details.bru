@@ -1,0 +1,25 @@
+meta {
+  name: get payment details
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:8082/v1/payment/531ee605-28c5-4beb-b7a9-8b51f24b463e
+  body: json
+  auth: none
+}
+
+body:json {
+  /*]{
+    "employeeName":"kumar",
+    "role":"Dev",
+    "companyName":"Comcast"
+  }*/
+  
+  {
+    "productName":"Bournvita",
+    "price":400,
+    "quantity":10
+  }
+}

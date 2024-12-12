@@ -1,0 +1,25 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: payment-service-application
+
+  config:
+    import: configserver:http://localhost:9271
+
+  h2:
+    console:
+      enabled: true
+
+  datasource:
+    url: jdbc:h2:file:~/data/payments
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update

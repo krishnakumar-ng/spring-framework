@@ -1,0 +1,116 @@
+Working on in built methods
+OOPs with Python
+Paramiko
+Flask 
+REST API
+Threads
+Micro services
+Regex
+AWS
+FAST API
+
+
+Pandas for data cleaning and scikit learn
+Deployment of web application
+Dashboard
+PyTest and Behaviour Driven Development in Python
+NLP in Python using spacy, nltk
+PDF document processing using PyPDF
+Content extraction from unstructured documents using Tesseract OCR
+ML in Python - Regression models
+
+Day-1
+-----
+1. Data Structures
+2. Functions - create - decorator
+3. OOPS(start)
+
+
+Day-2
+1. OOPS
+2. FLASK REST API
+
+
+Day-2
+1. Regex
+2. Threads
+
+
+Python Data Structures
+----------------------
+1. Lists
+2. Dictionaries
+3. Tuple
+4. Set
+
+
+Mutable - can be modified 
+-------
+Lists
+Dictionaries
+Set
+
+Immutable - cannot be modified
+---------
+Numbers
+Strings
+Tuple 
+Frozen Set
+
+
+Lists
+-----
+1. ordered collection - 1, 2, 3, 4, 5 => gets stored in the same way
+
+2. collection of heterogenous data
+
+3. memory allocation is not contagious
+
+4. It is sub scriptable
+
+5. It is mutable
+
+6. lists are enclosed in [ ]
+
+
+print(data, sep=, end="\n")
+
+
+List Comprehension
+------------------
+iterating through a collection using lambda syntax
+
+
+Dictionary
+----------
+is also called as associative array
+
+        0    1    2    3    4
+arr = ['a', 'b', 'c', 'd', 'e']
+
+
+associative_array = {0: 'a', 1: 'b', 2: 'c', 3: 'd', 4: 'e'}
+
+Keys
+----
+1. keys should be unique
+2. keys are user defined
+
+emp = {'empid': 101, 'empname': 'Jack', 'salary': 85000, 'dept': 'MKT'}
+
+
+dictionary is an unordered collection (< 3.7)
+
+dictionaries are mutable
+
+dictionaries are enclosed in {k: v}
+
+
+
+
+
+
+
+
+
+ 

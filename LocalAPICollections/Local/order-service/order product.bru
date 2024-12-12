@@ -1,0 +1,21 @@
+meta {
+  name: order product
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8081/v1/order
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "productId":"d1b72260-f664-4ae5-88ea-470f7fc311b1",
+    "totalAmount":1000,
+    "quantity":5
+  }
+  
+  
+}

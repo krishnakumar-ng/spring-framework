@@ -1,0 +1,8 @@
+custom:
+  yaml:
+    msg: Hello from Yaml.
+
+config:
+  training:
+    name: spring-boot-microservices
+    tutor: dinesh

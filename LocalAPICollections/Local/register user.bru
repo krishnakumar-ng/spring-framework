@@ -1,0 +1,21 @@
+meta {
+  name: register user
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:8080/auth/register
+  body: json
+  auth: none
+}
+
+body:json {
+  
+  {
+    "id":15,
+    "username":"ng",
+    "password":"testing123",
+    "roles":["ADMIN"]
+  }
+}

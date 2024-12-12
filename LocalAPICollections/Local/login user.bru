@@ -1,0 +1,23 @@
+meta {
+  name: login user
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:8080/auth/login
+  body: json
+  auth: basic
+}
+
+auth:basic {
+  username: test
+  password: test
+}
+
+body:json {
+  {
+    "username":"kumar",
+    "password":"testing123"
+  }
+}

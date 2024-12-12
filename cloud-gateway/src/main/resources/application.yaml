@@ -1,0 +1,49 @@
+server:
+  port: 9090
+
+spring:
+  config:
+    import: configserver:http://localhost:9271
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      discovery:
+        location:
+          enable: true
+      routes:
+#        - id: PRODUCT-SERVICE-APPLICATION
+#          uri: http://localhost:8080
+#          predicates:
+#            - Path=/v1/product/**
+#
+#        - id: ORDER-SERVICE-APPLICATION
+#          uri: http://localhost:8081
+#          predicates:
+#            - Path=/v1/order/**
+#
+#        - id: PAYMENT-SERVICE-APPLICATION
+#          uri: http://localhost:8082
+#          predicates:
+#            - Path=/v1/payment/**
+
+        - id: PRODUCT-SERVICE-APPLICATION
+          uri: lb://PRODUCT-SERVICE-APPLICATION
+          predicates:
+            - Path=/v1/product/**
+
+        - id: ORDER-SERVICE-APPLICATION
+          uri: lb://ORDER-SERVICE-APPLICATION
+          predicates:
+            - Path=/v1/order/**
+
+        - id: PAYMENT-SERVICE-APPLICATION
+          uri: lb://PAYMENT-SERVICE-APPLICATION
+          predicates:
+            - Path=/v1/payment/**
+
+managements:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

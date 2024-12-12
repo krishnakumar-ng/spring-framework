@@ -1,0 +1,20 @@
+meta {
+  name: make payment
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8082/v1/payment
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "orderId":"12343",
+    "paymentMode":"DEBIT_CARD",
+    "amountRequired":100,
+    "amount":100
+  }
+}

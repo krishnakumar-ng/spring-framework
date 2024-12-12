@@ -1,0 +1,60 @@
+Write a function that can take n number of arguments and print it.
+
+HOF - Higher Order Function
+
+if a function takes another function as an argument or return a function reference as a return value then we call it as HOF
+
+Write a decorator to calculate the time taken by a function to execute
+
+
+OOPS
+----
+Why OOPS?
+
+
+reusability - Inheritance
+dynamically change the behaviour of a function - polymorphism
+Hide the code implementation from the end user - abstraction
+combine all the modules into one project - encapsulation
+
+Bank Debit cards - 
+		normal - withdraw - 40k / day
+		gold   - withdraw - 1 lakh / day 
+		platinum - withdraw - 2.5 lakhs / day
+
+
+ATM
+---
+polymorphism - 
+
+
+oops in python
+--------------
+
+create two classmethods 
+
+1. to set the headname 
+2. to print the headname
+
+add => __add__()
+
+__add__(), __sub__()  => magic methods
+
+
+Overload all arithmetic operators
+
++, -, *, /, //, %
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 

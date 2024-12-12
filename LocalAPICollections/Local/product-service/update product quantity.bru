@@ -1,0 +1,29 @@
+meta {
+  name: update product quantity
+  type: http
+  seq: 5
+}
+
+put {
+  url: http://localhost:8080/v1/product/d45b1e05-60b6-4b0c-8c7e-8fd8a4162b29?quantity=15
+  body: json
+  auth: none
+}
+
+params:query {
+  quantity: 15
+}
+
+body:json {
+  /*]{
+    "employeeName":"kumar",
+    "role":"Dev",
+    "companyName":"Comcast"
+  }*/
+  
+  {
+    "productName":"Bournvita",
+    "price":400,
+    "quantity":10
+  }
+}

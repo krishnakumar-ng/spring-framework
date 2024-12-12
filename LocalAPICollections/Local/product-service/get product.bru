@@ -1,0 +1,25 @@
+meta {
+  name: get product
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:9090/v1/product/2fe3dfe3-5f3e-497a-9184-e2410f72acf6
+  body: json
+  auth: none
+}
+
+body:json {
+  /*]{
+    "employeeName":"kumar",
+    "role":"Dev",
+    "companyName":"Comcast"
+  }*/
+  
+  {
+    "productName":"Bournvita",
+    "price":400,
+    "quantity":10
+  }
+}

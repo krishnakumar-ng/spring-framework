@@ -1,0 +1,26 @@
+meta {
+  name: add roles
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:8080/auth/add/roles
+  body: json
+  auth: basic
+}
+
+headers {
+  ~X-CSRF-TOKEN: 9hWusKQlpp5BXpHKmdyYuQ9PTuTOeDsQJZGPdpqsVcA_3Kb6k3SeiZQUka1sOqKp-_GsjTwpY9z4Ggk9HaC4TqicN_QIup7N
+}
+
+auth:basic {
+  username: test
+  password: test
+}
+
+body:json {
+  {
+    "roleName":"USER"
+  }
+}
